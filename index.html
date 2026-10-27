@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تاب بيوتي | اختاري نوع الرمش المناسب لإطلالتك</title>
+    <meta name="description" content="اكتشفي أنواع رموش تاب بيوتي الستة، واختاري الستايل المناسب لإطلالتك بسهولة. لكل نوع لون نقش مخصص يميزه على العلبة.">
+    
+    <!-- استدعاء مكتبة الأيقونات الجاهزة العالمية Font Awesome 6 -->
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ====================================================================
+         NEW ELEMENT: iOS Premium Preloader (شاشة الترحيب والتحميل الفاخرة)
+         ==================================================================== -->
+    <div id="tab-preloader" style="position:fixed; inset:0; background:#ffffff; z-index:9999; display:flex; align-items:center; justify-content:center; transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:24px; text-align:center;">
+            <img src="assets/images/logo_tab_gradient_transparent_extracted.png" alt="تاب بيوتي" style="height:68px; animation: pulseLogo 1.6s infinite ease-in-out;" onerror="this.onerror=null;this.src='assets/images/tab-beauty-logo.png';">
+            <div style="width:160px; height:3px; background:#f1f5f9; border-radius:10px; overflow:hidden; position:relative;">
+                <div style="position:absolute; top:0; left:0; height:100%; width:40%; background:linear-gradient(90deg, var(--purple), var(--pink)); border-radius:10px; animation: loadingBar 1.2s infinite ease-in-out;"></div>
+            </div>
+            <p style="font-size:14px; font-weight:500; color:var(--text-light); letter-spacing:0.5px; animation: pulseLogo 1.6s infinite ease-in-out;">لكل إطلالة رمشها...</p>
+        </div>
+    </div>
+
+    <!-- إضافة ستايل Preloader والأنيميشن المرافق له -->
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html#" class="logo">
+                <img src="assets/images/logo_tab_gradient_transparent_extracted.png" alt="تاب بيوتي" onerror="this.onerror=null;this.src='assets/images/tab-beauty-logo.png';">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#hero">الرئيسية</a>
+                <a href="index.html#products">أنواع الرموش</a>
+                <a href="index.html#" data-open-mobile-page="mobileGuidePage">طريقة الاستخدام</a>
+                <a href="index.html#" data-open-mobile-page="mobileBoxPage">اختيار النوع</a>
+                <a href="index.html#" data-open-mobile-page="mobileAccessoriesPage">الإكسسوارات</a>
+                <a href="index.html#faq">الأسئلة الشائعة</a>
+            </nav>
+            <div class="header-actions">
+                <!-- أيقونة السلة الفاخرة المدمجة بالهيدر -->
+                <button class="cart-trigger-btn" id="headerCartBtn" aria-label="سلة التسوق">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-badge" id="headerCartBadge">0</span>
+                </button>
+                <a href="index.html#products" class="btn">تصفحي الرموش</a>
+            </div>
+        </div>
+    </header>
+    <div class="identity-rail identity-rail-top" aria-hidden="true"><span class="identity-rail-mark"><i></i><b></b><i></i></span></div>
+
+    <!-- الزر العائم لسلة التسوق على الهواتف والتابلت -->
+    <button class="floating-cart-trigger" id="floatingCartBtn" aria-label="عرض سلة التسوق">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <span class="floating-cart-badge" id="floatingCartBadge">0</span>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-tagline">رموش مغناطيسية ذكية وبدون غراء</span>
+                <h1>لكل إطلالة رمشها</h1>
+                <p class="hero-lead">ستة أنواع من الرموش، لكل نوع شكل ولون نقش يميّزه. اختاري الأقرب لعينك وإطلالتك.</p>
+                <div class="hero-buttons">
+                    <a href="index.html#products" class="btn">تصفحي الرموش</a>
+                    <a href="index.html#" class="btn btn-outline" data-open-mobile-page="mobileGuidePage">شاهدي طريقة الاستخدام</a>
+                </div>
+            </div>
+            <div class="hero-visual-wrapper">
+                <div class="hero-vibrant-glow"></div>
+                <div class="hero-collection-container">
+                    <img class="hero-collection-photo" src="assets/images/Asset%2014.png" alt="مجموعة رموش تاب بيوتي الشاملة" onerror="this.onerror=null;this.src='assets/images/Asset 14.png';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <h2>رمش واضح لكل إطلالة</h2>
+            <p>اختاري بين ستة أنواع واضحة، من الخفيف اليومي إلى الكثيف للمناسبات. لون النقش على العلبة يعرّفك بالنوع بسرعة.</p>
+        </div>
+    </section>
+
+    <!-- Products Slider Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="products-header">
+                <div class="products-header-text">
+                    <h2 class="section-title" style="text-align: right; margin-bottom: 8px;">اختاري الرمش حسب إطلالتك</h2>
+                    <p class="section-subtitle" style="text-align: right; margin-bottom: 0;">قارني الكثافة، طول الخصل، والنتيجة النهائية، ثم اختاري النوع الأنسب لك.</p>
+                </div>
+                <div class="slider-arrows">
+                    <button class="slider-btn next" id="sliderNext" aria-label="التالي">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="slider-btn prev" id="sliderPrev" aria-label="السابق">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="slider-wrapper">
+                <div class="slider-container" id="sliderContainer">
+                    <div class="product-track" id="productTrack">
+                        <!-- 1 -->
+                        <div class="product-card card-pink stagger-reveal">
+                            <div class="card-top">
+                                <button class="favorite-btn" aria-label="أضف للمفضلة">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                </button>
+                            <div class="product-badge">Wispy</div>
+                            </div>
+                            <div class="product-img lash-product-img"><img src="assets/images/tab-lash-01-iris-black.png" alt="رموش Pink على خلفية بيضاء"></div>
+                            <h3 class="product-title" dir="ltr">Pink</h3>
+                            <p class="product-desc">خصل متفرقة بطول متدرج تمنح العين حضوراً ناعماً وواضحاً.</p>
+                            <div class="product-price">
+                                <span class="price-current">١٠٠ ريال</span>
+                                <span class="price-old">١٣٠ ريال</span>
+                            </div>
+                            <button class="btn-cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                إضافة للسلة
+                            </button>
+                        </div>
+                        <!-- 2 -->
+                        <div class="product-card card-blue stagger-reveal">
+                            <div class="card-top">
+                                <button class="favorite-btn" aria-label="أضف للمفضلة">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                </button>
+                            <div class="product-badge">Airy</div>
+                            </div>
+                            <div class="product-img lash-product-img"><img src="assets/images/tab-lash-02-frost-black.png" alt="رموش Blue على خلفية بيضاء"></div>
+                            <h3 class="product-title" dir="ltr">Blue</h3>
+                            <p class="product-desc">توزيع خفيف وبارد الملامح لنتيجة مرتبة تناسب الإطلالة اليومية.</p>
+                            <div class="product-price">
+                                <span class="price-current">١٠٠ ريال</span>
+                                <span class="price-old">١٣٠ ريال</span>
+                            </div>
+                            <button class="btn-cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                إضافة للسلة
+                            </button>
+                        </div>
+                        <!-- 3 -->
+                        <div class="product-card card-green stagger-reveal">
+                            <div class="card-top">
+                                <button class="favorite-btn" aria-label="أضف للمفضلة">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                </button>
+                            <div class="product-badge">Spiky</div>
+                            </div>
+                            <div class="product-img lash-product-img"><img src="assets/images/tab-lash-03-bunny-black.png" alt="رموش Green على خلفية بيضاء"></div>
+                            <h3 class="product-title" dir="ltr">Green</h3>
+                            <p class="product-desc">خصل جريئة ومدببة بإيقاع مرح ترفع العين وتبرزها بوضوح.</p>
+                            <div class="product-price">
+                                <span class="price-current">١٠٠ ريال</span>
+                                <span class="price-old">١٣٠ ريال</span>
+                            </div>
+                            <button class="btn-cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                إضافة للسلة
+                            </button>
+                        </div>
+                        <!-- 4 -->
+                        <div class="product-card card-purple stagger-reveal">
+                            <div class="card-top">
+                                <button class="favorite-btn" aria-label="أضف للمفضلة">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                </button>
+                            <div class="product-badge">Dense</div>
+                            </div>
+                            <div class="product-img lash-product-img"><img src="assets/images/tab-lash-04-ice-black.png" alt="رموش Purple على خلفية بيضاء"></div>
+                            <h3 class="product-title" dir="ltr">Purple</h3>
+                            <p class="product-desc">كثافة متقاربة وممتلئة تمنح العين إطاراً أسود أنيقاً للمناسبات.</p>
+                            <div class="product-price">
+                                <span class="price-current">١٠٠ ريال</span>
+                                <span class="price-old">١٣٠ ريال</span>
+                            </div>
+                            <button class="btn-cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                إضافة للسلة
+                            </button>
+                        </div>
+                        <!-- 5 -->
+                        <div class="product-card card-orange stagger-reveal">
+                            <div class="card-top">
+                                <button class="favorite-btn" aria-label="أضف للمفضلة">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                </button>
+                                <div class="product-badge">Everyday</div>
+                            </div>
+                            <div class="product-img lash-product-img"><img src="assets/images/tab-lash-05-natural.png" alt="رموش Orange على خلفية بيضاء"></div>
+                            <h3 class="product-title" dir="ltr">Orange</h3>
+                            <p class="product-desc">الاختيار الأقرب للرموش الطبيعية؛ خفيف ومتوازن للاستخدام اليومي.</p>
+                            <div class="product-price">
+                                <span class="price-current">١٠٠ ريال</span>
+                                <span class="price-old">١٣٠ ريال</span>
+                            </div>
+                            <button class="btn-cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                إضافة للسلة
+                            </button>
+                        </div>
+                        <!-- 6 -->
+                        <div class="product-card card-yellow stagger-reveal">
+                            <div class="card-top">
+                                <button class="favorite-btn" aria-label="أضف للمفضلة">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                </button>
+                                <div class="product-badge">Soft Full</div>
+                            </div>
+                            <div class="product-img lash-product-img"><img src="assets/images/tab-lash-06-morning-mist.png" alt="رموش Yellow على خلفية بيضاء"></div>
+                            <h3 class="product-title" dir="ltr">Yellow</h3>
+                            <p class="product-desc">امتلاء ناعم بخصل دقيقة يفتح العين ويمنحها لمسة ضبابية ساحرة.</p>
+                            <div class="product-price">
+                                <span class="price-current">١٠٠ ريال</span>
+                                <span class="price-old">١٣٠ ريال</span>
+                            </div>
+                            <button class="btn-cart">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                إضافة للسلة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mobile-trust-strip" aria-label="مزايا سريعة">
+        <span class="mobile-trust-chip">✓ بدون غراء</span>
+        <span class="mobile-trust-chip">✓ 6 ستايلات واضحة</span>
+        <span class="mobile-trust-chip">✓ علبة حفظ بيضاء</span>
+        <span class="mobile-trust-chip">✓ استرجاع المغلف خلال 7 أيام</span>
+    </div>
+
+    <section class="mobile-quick-hub" aria-label="روابط التفاصيل المهمة">
+        <div class="container">
+            <h2>دليلك لتجربة أسهل</h2>
+            <p>طريقة الاستخدام، الإكسسوارات والسياسات في مكان واحد.</p>
+            <div class="mobile-hub-grid">
+                <button class="mobile-hub-card" type="button" data-open-mobile-page="mobileGuidePage">
+                    <span class="mobile-hub-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                    <strong>طريقة الاستخدام</strong>
+                    <span>4 خطوات بسيطة مع نصائح الحفظ.</span>
+                </button>
+                <button class="mobile-hub-card" type="button" data-open-mobile-page="mobileAccessoriesPage">
+                    <span class="mobile-hub-icon"><i class="fa-solid fa-gift"></i></span>
+                    <strong>إكسسوارات تاب</strong>
+                    <span>ملصقات، تعليقة، مرآة وبطاقة هدية.</span>
+                </button>
+                <button class="mobile-hub-card" type="button" data-open-mobile-page="mobilePolicyPage">
+                    <span class="mobile-hub-icon"><i class="fa-solid fa-shield-heart"></i></span>
+                    <strong>الشراء والسياسات</strong>
+                    <span>الدفع، التوصيل والاسترجاع باختصار.</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         RESTRUCTURED & FIXED: Compact Premium Cases & Colors Showcase
+         ==================================================================== -->
+    <section id="packaging-studio" class="packaging-section-light">
+        <div class="container">
+            <h2 class="section-title">اختاري نوع الرمش</h2>
+            <p class="section-subtitle">كل نوع مرتبط بلون نقش محدد على العلبة ليسهل تمييزه. اختاري النوع أولاً، وسيظهر لون النقش الخاص به تلقائياً.</p>
+            
+            <div class="studio-wrapper-compact">
+                <div class="studio-visual-container">
+                    <div class="studio-neon-glow" id="studioGlow"></div>
+                    <div class="linked-type-stage" id="linkedTypeStage" style="--linked-theme:#FF98CB" aria-label="معاينة نوع الرمش والنقش المرتبط به">
+                        <article class="linked-preview-card linked-lash-card">
+                            <span class="linked-preview-kicker">نوع الرمش</span>
+                            <div class="linked-image-shell linked-lash-shell">
+                                <img id="activeLashPreview" src="assets/images/tab-lash-01-iris-black.png" alt="رموش Pink">
+                            </div>
+                            <strong id="linkedLashName" dir="ltr">Pink</strong>
+                        </article>
+
+                        <div class="linked-auto-connector" aria-hidden="true">
+                            <span></span>
+                            <i class="fa-solid fa-link"></i>
+                            <span></span>
+                            <small>مرتبطان تلقائياً</small>
+                        </div>
+
+                        <article class="linked-preview-card linked-case-card">
+                            <span class="linked-preview-kicker">النقش المرتبط</span>
+                            <div class="linked-image-shell linked-case-shell">
+                                <img id="activeCaseImage" src="assets/images/case-linked-01-iris-black.png" alt="علبة Pink بالنقش الوردي">
+                            </div>
+                            <strong id="linkedCaseName">النقش الوردي</strong>
+                        </article>
+                    </div>
+                </div>
+                <div class="studio-controls-compact">
+                    <h3 class="studio-control-title">اختاري النوع</h3>
+                    <span class="studio-selected-name" id="selectedColorName">Pink — النقش الوردي</span>
+                    <div class="studio-material-note"><i class="fa-solid fa-circle-check"></i><span>لون النقش مرتبط بالنوع ولا يُختار بشكل منفصل</span></div>
+
+                    <div class="studio-link-summary" aria-live="polite">
+                        <span class="studio-link-icon"><i class="fa-solid fa-link"></i></span>
+                        <div>
+                            <strong id="activeTypeLabel" dir="ltr">Pink</strong>
+                            <span id="activeTypeColor">النقش الوردي على العلبة</span>
+                        </div>
+                    </div>
+
+                    <div class="studio-swatches-grid" aria-label="أنواع الرموش الستة">
+                        <button class="studio-swatch active" data-image="assets/images/case-linked-01-iris-black.png" data-lash-image="assets/images/tab-lash-01-iris-black.png" data-glow="rgba(255, 152, 203, 0.22)" data-theme="#FF98CB" data-name="Pink — النقش الوردي" data-type="Pink" data-color-name="النقش الوردي على العلبة" data-case-label="النقش الوردي" data-desc="خصل Wispy متدرجة تمنح العين حضوراً ناعماً وواضحاً." aria-label="Pink">
+                            <span class="studio-swatch-dot" style="background:#FF98CB"></span><span>Pink</span>
+                        </button>
+                        <button class="studio-swatch" data-image="assets/images/case-linked-02-frost-black.png" data-lash-image="assets/images/tab-lash-02-frost-black.png" data-glow="rgba(152, 203, 255, 0.22)" data-theme="#98CBFF" data-name="Blue — النقش الأزرق" data-type="Blue" data-color-name="النقش الأزرق على العلبة" data-case-label="النقش الأزرق" data-desc="توزيع خفيف وهوائي يناسب الإطلالة اليومية الهادئة." aria-label="Blue">
+                            <span class="studio-swatch-dot" style="background:#98CBFF"></span><span>Blue</span>
+                        </button>
+                        <button class="studio-swatch" data-image="assets/images/case-linked-03-bunny-black.png" data-lash-image="assets/images/tab-lash-03-bunny-black.png" data-glow="rgba(178, 228, 159, 0.22)" data-theme="#B2E49F" data-name="Green — النقش الأخضر" data-type="Green" data-color-name="النقش الأخضر على العلبة" data-case-label="النقش الأخضر" data-desc="خصل Spiky واضحة ترفع العين وتمنحها حضوراً جريئاً." aria-label="Green">
+                            <span class="studio-swatch-dot" style="background:#B2E49F"></span><span>Green</span>
+                        </button>
+                        <button class="studio-swatch" data-image="assets/images/case-linked-04-ice-black.png" data-lash-image="assets/images/tab-lash-04-ice-black.png" data-glow="rgba(192, 156, 236, 0.22)" data-theme="#C09CEC" data-name="Purple — النقش البنفسجي" data-type="Purple" data-color-name="النقش البنفسجي على العلبة" data-case-label="النقش البنفسجي" data-desc="كثافة ممتلئة ترسم إطاراً واضحاً للعين في المناسبات." aria-label="Purple">
+                            <span class="studio-swatch-dot" style="background:#C09CEC"></span><span>Purple</span>
+                        </button>
+                        <button class="studio-swatch" data-image="assets/images/case-linked-05-natural.png" data-lash-image="assets/images/tab-lash-05-natural.png" data-glow="rgba(255, 152, 102, 0.22)" data-theme="#FF9866" data-name="Orange — النقش البرتقالي" data-type="Orange" data-color-name="النقش البرتقالي على العلبة" data-case-label="النقش البرتقالي" data-desc="خصل خفيفة ومتوازنة للحصول على نتيجة قريبة من الرموش الطبيعية." aria-label="Orange">
+                            <span class="studio-swatch-dot" style="background:#FF9866"></span><span>Orange</span>
+                        </button>
+                        <button class="studio-swatch" data-image="assets/images/case-linked-06-morning-mist.png" data-lash-image="assets/images/tab-lash-06-morning-mist.png" data-glow="rgba(255, 255, 152, 0.24)" data-theme="#D2C63D" data-name="Yellow — النقش الأصفر" data-type="Yellow" data-color-name="النقش الأصفر على العلبة" data-case-label="النقش الأصفر" data-desc="امتلاء ناعم بخصل دقيقة ومتداخلة يمنح العين عمقاً خفيفاً." aria-label="Yellow">
+                            <span class="studio-swatch-dot" style="background:#FFFF98"></span><span>Yellow</span>
+                        </button>
+                    </div>
+
+                    <div class="studio-description-box">
+                        <p id="activeColorDesc" class="studio-desc-text">خصل Wispy متدرجة تمنح العين حضوراً ناعماً وواضحاً.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accessories-showcase">
+                <div class="accessories-image-wrap">
+                    <img src="assets/images/tab-accessories-kit.png" alt="اكسسوارات تاب: ملصقات شخصيات الهوية وتعليقة ومرآة صغيرة مع علبة الرموش البيضاء">
+                </div>
+                <div class="accessories-copy">
+                    <h3>إضافات من هوية تاب</h3>
+                    <p>إضافات اختيارية مستوحاة من شخصيات الهوية وألوانها.</p>
+                    <div class="accessory-chips" aria-label="أفكار اكسسوارات تاب">
+                        <span class="accessory-chip">ملصقات الحيوانات</span>
+                        <span class="accessory-chip">تعليقة أكريليك</span>
+                        <span class="accessory-chip">مرآة حقيبة صغيرة</span>
+                        <span class="accessory-chip">بطاقة هدية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         REdesigned: "Why Tab" (لماذا تاب؟)
+         ==================================================================== -->
+    <section id="why-tab" class="why-tab">
+        <div class="container">
+            <h2 class="section-title">رموشك أولاً</h2>
+            <p class="section-subtitle">في تاب، الرموش هي أساس التجربة. كل التفاصيل الأخرى، من الألوان إلى التغليف، وجدت لتساعدك على اختيار الرمش وحفظه بطريقة أسهل. العلبة ليست الفكرة، بل دورها أن تحافظ على الرموش بعد الاستخدام وتجعل تجربتك أكثر ترتيباً.</p>
+            
+            <div class="features-grid">
+                <!-- الميزة 1: خيارات واضحة بدل الحيرة -->
+                <div class="feature-item accent-blue stagger-reveal">
+                    <div class="feature-icon-premium">
+                        <!-- أيقونة جاهزة لبريق السحر والخيارات الواضحة -->
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>خيارات واضحة بدل الحيرة</h3>
+                    <p>كل نوع من رموش تاب مصمم ليخدم إطلالة معينة، حتى تختاري حسب احتياجك المباشر وليس بناءً على التخمين.</p>
+                </div>
+
+                <!-- الميزة 2: خفيفة وواضحة التأثير -->
+                <div class="feature-item accent-pink stagger-reveal">
+                    <div class="feature-icon-premium">
+                        <!-- أيقونة ريشة ناعمة جاهزة تعبر عن الخفة الكاملة والنعومة -->
+                        <i class="fa-solid fa-feather-pointed"></i>
+                    </div>
+                    <h3>خفيفة وواضحة التأثير</h3>
+                    <p>رموش خفيفة الوزن ومريحة للغاية، صُممت لتمنح العين حضوراً جذاباً وأنيقاً بدون إحساس بالثقل.</p>
+                </div>
+
+                <!-- الميزة 3: متنوعة حسب الستايل -->
+                <div class="feature-item accent-green stagger-reveal">
+                    <div class="feature-icon-premium">
+                        <!-- أيقونة العين الرقيقة المفتوحة للتعبير عن الستايل والتنوع -->
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3>متنوعة حسب الستايل</h3>
+                    <p>من الإطلالة اليومية الهادئة إلى اللوك الفاتن المخصص للسهرات، كل رمش يمتلك طابعاً متفرداً.</p>
+                </div>
+
+                <!-- الميزة 4: تجربة مرتبة بعد الاستخدام -->
+                <div class="feature-item accent-purple stagger-reveal">
+                    <div class="feature-icon-premium">
+                        <!-- أيقونة الحافظة المنظمة والمقسمة بدقة لرموش ومغانط تاب -->
+                        <i class="fa-solid fa-box-archive"></i>
+                    </div>
+                    <h3>تجربة مرتبة بعد الاستخدام</h3>
+                    <p>تساعدكِ العلبة الذكية على حفظ الرموش وحمايتها من التلف والضياع للحفاظ عليها بكامل جودتها للاستخدام القادم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================
+         REdesigned: "How To Use" Section (طريقة الاستخدام الفنية المبتكرة)
+         ======================================================== -->
+    <section id="how-to-use" class="how-to-use-artistic">
+        <div class="container">
+            <h2 class="section-title">سهولة وثبات بلمح البصر</h2>
+            <p class="section-subtitle">وداعاً لمشاكل الغراء السائل المزعج والحساسية، مع تقنية المغناطيس الذكية من تاب ستحصلين على رموش مثالية في 4 خطوات هادئة وممتعة.</p>
+
+            <div class="artistic-steps-grid">
+                <!-- الخطوة 1 -->
+                <div class="artistic-step-item stagger-reveal">
+                    <span class="artistic-step-num">01</span>
+                    <div class="artistic-step-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="artistic-step-title">اختيار الرمش المثالي</h3>
+                    <p class="artistic-step-desc">اختاري التصميم المتناغم مع خطة يومكِ؛ فالخفيف اليومي للعمل، والمسحوب الجريء لمناسباتكِ السعيدة.</p>
+                </div>
+
+                <!-- الخطوة 2 -->
+                <div class="artistic-step-item stagger-reveal">
+                    <span class="artistic-step-num">02</span>
+                    <div class="artistic-step-icon">
+                        <i class="fa-solid fa-magnet"></i>
+                    </div>
+                    <h3 class="artistic-step-title">التقريب لخط الرموش</h3>
+                    <p class="artistic-step-desc">قربي الرمش برفق وبمساعدة الملقط المخصص نحو خط الرموش الطبيعي لعينيكِ بهدوء وتأنٍ.</p>
+                </div>
+
+                <!-- الخطوة 3 -->
+                <div class="artistic-step-item stagger-reveal">
+                    <span class="artistic-step-num">03</span>
+                    <div class="artistic-step-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 class="artistic-step-title">ثبات تام فوري</h3>
+                    <p class="artistic-step-desc">ستشعرين بقوة الجذب المغناطيسي الخفيف والآمن للقطع الدقيقة، لتثبت الرموش بثبات تام ومريح طوال اليوم.</p>
+                </div>
+
+                <!-- الخطوة 4 -->
+                <div class="artistic-step-item stagger-reveal">
+                    <span class="artistic-step-num">04</span>
+                    <div class="artistic-step-icon">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="artistic-step-title">الحفظ في العلبة الحامية</h3>
+                    <p class="artistic-step-desc">بعد الاستخدام، أعيدي الرمش إلى علبته المعدنية لحفظ القطع من الأتربة وضمان استخدام متكرر آمن.</p>
+                </div>
+            </div>
+
+            <!-- بطاقة نصيحة الخبراء الإضافية لرفع مستوى القيمة المعرفية -->
+            <div class="premium-tip-box stagger-reveal">
+                <div class="premium-tip-icon">
+                    <i class="fa-solid fa-circle-info" style="font-size: 26px;"></i>
+                </div>
+                <div class="premium-tip-text">
+                    <h4>نصيحة خبراء تاب بيوتي:</h4>
+                    <p>لضمان الحصول على ثبات مثالي وحرية حركة مطلقة للعينين، يُنصح بتنظيف القطع المغناطيسية الدقيقة بمسحة جافة ناعمة من حين لآخر للتخلص من بقايا مستحضرات التجميل الأخرى.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         NEW SECTION: Interactive Model Eye Look Preview (قسم استعراض الموديل)
+         ==================================================================== -->
+    <section class="model-showcase-section">
+        <div class="container">
+            <div class="model-grid">
+                
+                <!-- لوحة الشرح الجانبية للتحكم بالإطلالات (التصميم الجديد) -->
+                <div class="model-controls">
+                    <div class="model-controls-header">
+                        <h3>استعرضي الأنواع الستة على العين</h3>
+                        <div class="model-look-tabs lash-tabs" aria-label="اختيار نوع الرمش">
+                            <button class="look-tab-btn" data-look="iris" dir="ltr">Pink</button>
+                            <button class="look-tab-btn" data-look="frost" dir="ltr">Blue</button>
+                            <button class="look-tab-btn" data-look="bunny" dir="ltr">Green</button>
+                            <button class="look-tab-btn" data-look="ice" dir="ltr">Purple</button>
+                            <button class="look-tab-btn active" data-look="natural" dir="ltr">Orange</button>
+                            <button class="look-tab-btn" data-look="morning" dir="ltr">Yellow</button>
+                        </div>
+                    </div>
+
+                    <!-- كرت التفاصيل -->
+                    <div class="look-card">
+                        <h4 class="look-desc-title" id="lookTitle">Orange — الطبيعي المتوازن</h4>
+                        <p class="look-desc-text" id="lookDesc">أقرب نتيجة للرموش الطبيعية؛ خصل متوازنة وخفيفة تمنح العين حضوراً مرتباً من دون مبالغة، ومناسبة للدوام والاستخدام اليومي.</p>
+                        <div class="look-features-list" id="lookFeatures">
+                            <div class="look-feature-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>خفة مناسبة لساعات اليوم الطويلة</span>
+                            </div>
+                            <div class="look-feature-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>تدرج متوازن يندمج مع خط الرموش</span>
+                            </div>
+                            <div class="look-feature-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>اختيار واضح للمبتدئات والإطلالة الهادئة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مسبك صورة الموديل التفاعلية -->
+                <div class="model-visual-wrapper">
+                    <img id="lashLookImage" src="assets/images/lash-eye-natural.png" alt="Orange على عين طبيعية" class="model-photo">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">تفاصيل صغيرة تصنع فرقاً كبيراً</h2>
+            <p class="section-subtitle">لقطات المنتج والهوية تعطي إحساساً أقرب للعلامة التجارية، وتوضح روح تاب بطريقة بسيطة ومرتبة.</p>
+
+            <div class="gallery-grid">
+                <!-- كرت التغليف الفاخر (الأيمن) -->
+                <div class="gallery-item stagger-reveal">
+                    <img src="assets/images/product_card_purple_box.png" alt="تغليف فاخر يحفظ الرموش" onerror="this.onerror=null;this.src='assets/images/gallery-1.png';">
+                    <div class="gallery-caption">تغليف فاخر يحفظ الرموش</div>
+                </div>
+                <!-- كرت ألوان الرافعة الممتعة (الأوسط) -->
+                <div class="gallery-item stagger-reveal">
+                    <img src="assets/images/social_photo_packaging_hanging_crop.png" alt="ألوان باستيلية هادئة">
+                    <div class="gallery-caption">ألوان باستيلية هادئة</div>
+                </div>
+                <!-- كرت الموديل الحية الحاملة للمنتج (الأيسر) -->
+                <div class="gallery-item stagger-reveal">
+                    <img src="assets/images/social_photo_person_holding_box_crop.png" alt="إطلالة مرتبة وأنيقة">
+                    <div class="gallery-caption">إطلالة مرتبة وأنيقة</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         NEW: Unified Community Section (Testimonials + FAQ)
+         ==================================================================== -->
+    <section id="community" class="community-section">
+        <div class="container">
+            <h2 class="section-title">كل ما تحتاجين معرفته</h2>
+            <p class="section-subtitle">إجابات واضحة عن الاستخدام والشراء والاسترجاع ومدة التوصيل.</p>
+            
+            <div class="community-grid">
+                
+                <!-- العمود الأيمن: التقييمات -->
+                <div class="community-col">
+                    <h3 class="community-column-title">قالوا عن تاب <span style="color: #FF98CB;"><i class="fa-solid fa-heart"></i></span></h3>
+                    
+                    <div class="testi-list">
+                        <!-- تقييم 1 -->
+                        <div class="testi-card-clean stagger-reveal">
+                            <div class="testi-stars-clean">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testi-quote-clean">"خفيفة على العين وشكلها مرتب. أعجبني أن الأنواع واضحة والاختيار بينها سهل."</p>
+                            <div class="testi-user-clean">
+                                <div class="verified-badge-clean"><i class="fa-solid fa-check"></i> تجربة عميلة</div>
+                                <div class="user-info-group">
+                                    <div style="text-align: left;">
+                                        <div class="user-name-clean">نورا أحمد</div>
+                                        <div class="user-style-clean">Orange</div>
+                                    </div>
+                                    <div class="user-avatar-clean" style="background: rgba(192, 156, 236, 0.15); color: var(--purple);">ن</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- تقييم 2 -->
+                        <div class="testi-card-clean stagger-reveal">
+                            <div class="testi-stars-clean">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testi-quote-clean">"لون النقش ساعدني أميّز النوع بسرعة، والعلبة تحفظ الرموش بشكل مرتب بعد الاستخدام."</p>
+                            <div class="testi-user-clean">
+                                <div class="verified-badge-clean"><i class="fa-solid fa-check"></i> تجربة عميلة</div>
+                                <div class="user-info-group">
+                                    <div style="text-align: left;">
+                                        <div class="user-name-clean">سارة محمد</div>
+                                        <div class="user-style-clean">Pink</div>
+                                    </div>
+                                    <div class="user-avatar-clean" style="background: rgba(255, 152, 203, 0.15); color: var(--pink);">س</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- العمود الأيسر: الأسئلة الشائعة -->
+                <div class="community-col" id="faq">
+                    <h3 class="community-column-title">الأسئلة الشائعة <span style="color: var(--purple);"><i class="fa-solid fa-circle-question"></i></span></h3>
+                    
+                    <div class="faq-search-clean">
+                        <input type="text" id="faqSearchInput" placeholder="هل لديكِ تساؤل محدد؟ ابحثي هنا...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <div class="faq-list-clean" id="faqAccordion">
+                        <!-- سؤال 1 -->
+                        <div class="faq-item-clean stagger-reveal">
+                            <button class="faq-trigger-clean">
+                                <span>كيف أستخدم الرموش وأحفظها؟</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-content-clean">
+                                <div class="faq-inner-clean">
+                                    اختاري الستايل، قرّبي الرمش من خط الرموش باستخدام الملقط المخصص ثم ثبتيه بهدوء حسب إرشادات المنتج. بعد الاستخدام انزعيه بلطف، نظفي نقاط التثبيت بمسحة جافة، وأعيديه مباشرة إلى العلبة البيضاء لحمايته.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- سؤال 2 -->
+                        <div class="faq-item-clean stagger-reveal">
+                            <button class="faq-trigger-clean">
+                                <span>كيف أطلب وأدفع من المتجر؟</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-content-clean">
+                                <div class="faq-inner-clean">
+                                    اختاري نوع الرمش ثم أضيفيه للسلة، راجعي الكمية والعنوان، وأكملي الدفع من صفحة إتمام الطلب. أكملي بياناتك واختاري وسيلة الدفع والشحن المتاحة عند إتمام الطلب.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- سؤال 3 -->
+                        <div class="faq-item-clean stagger-reveal">
+                            <button class="faq-trigger-clean">
+                                <span>ما سياسة الاسترجاع؟</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-content-clean">
+                                <div class="faq-inner-clean">
+                                    لأسباب صحية، لا يمكن استرجاع المنتج إذا فُتح تغليفه أو أزيل ختمه. إذا بقي المنتج مغلفاً بحالته الأصلية فيمكن طلب الاسترجاع خلال 7 أيام من تاريخ استلام الطلب، وتُستكمل الخطوات من خلال خدمة عملاء المتجر.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- سؤال 4 -->
+                        <div class="faq-item-clean stagger-reveal">
+                            <button class="faq-trigger-clean">
+                                <span>كم تستغرق مدة التوصيل؟</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-content-clean">
+                                <div class="faq-inner-clean">
+                                    تختلف مدة التوصيل حسب المدينة وشركة الشحن، وتظهر المدة التقديرية قبل إتمام الطلب.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe -->
+    <section class="subscribe">
+        <div class="container">
+            <h2 class="section-title">كوني أول من يعرف</h2>
+            <p class="section-subtitle" style="margin-bottom: 0;">سجلي بريدك ليصلك جديد الأنواع والعروض.</p>
+            <form class="subscribe-form" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="اكتبي بريدك الإلكتروني" required>
+                <button type="submit" class="btn">اشتركي الآن</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="index.html#" class="footer-logo">
+                <img src="assets/images/logo_tab_gradient_transparent_extracted.png" alt="تاب بيوتي" onerror="this.onerror=null;this.src='assets/images/tab-beauty-logo.png';">
+            </a>
+            <p class="footer-text">رموش ناعمة ومتنوعة، مصممة لتناسب أكثر من إطلالة. اختاري رمشك، وخلي تفاصيل عينك تتكلم.</p>
+            
+            <div class="footer-links">
+                <a href="index.html#hero">الرئيسية</a>
+                <a href="index.html#products">أنواع الرموش</a>
+                <a href="index.html#" data-open-mobile-page="mobileGuidePage">طريقة الاستخدام</a>
+                <a href="index.html#" data-open-mobile-page="mobileBoxPage">اختيار النوع</a>
+                <a href="index.html#" data-open-mobile-page="mobileAccessoriesPage">الإكسسوارات</a>
+                <a href="index.html#faq">الأسئلة الشائعة</a>
+            </div>
+            
+            <div class="copyright">
+                <p>لكل إطلالة رمشها</p>
+                <p style="margin-top: 10px;">جميع الحقوق محفوظة لتاب بيوتي</p>
+            </div>
+        </div>
+    </footer>
+    <div class="identity-rail identity-rail-bottom" aria-hidden="true"><span class="identity-rail-mark"><i></i><b></b><i></i></span></div>
+
+    <!-- Mobile content pages: secondary information stays off the home page. -->
+    <div class="mobile-content-page" id="mobileGuidePage" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="mobileGuideTitle">
+        <div class="mobile-page-header">
+            <h2 id="mobileGuideTitle">طريقة الاستخدام والحفظ</h2>
+            <button class="mobile-page-close" type="button" data-close-mobile-page aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="mobile-page-body">
+            <p class="mobile-page-intro">أربع خطوات مختصرة للحصول على نتيجة مرتبة والمحافظة على الرموش لأطول فترة ممكنة.</p>
+            <div class="mobile-info-card"><h3><span class="step-number">1</span>اختاري الستايل</h3><p>قارني الأنواع الستة على العين ثم اختاري الأقرب لإطلالتك اليومية أو المناسبة.</p></div>
+            <div class="mobile-info-card"><h3><span class="step-number">2</span>قرّبي الرمش</h3><p>استخدمي الملقط المخصص وقرّبي الرمش بهدوء من خط رموشك الطبيعية.</p></div>
+            <div class="mobile-info-card"><h3><span class="step-number">3</span>ثبّتيه بلطف</h3><p>اضبطي الزوايا حسب تعليمات المنتج وتجنبي السحب أو الضغط القوي.</p></div>
+            <div class="mobile-info-card"><h3><span class="step-number">4</span>نظفي واحفظي</h3><p>بعد الاستخدام انزعيه بلطف، نظفي نقاط التثبيت بمسحة جافة وأعيديه إلى العلبة.</p></div>
+            <div class="mobile-info-card"><h3>نصيحة مهمة</h3><p>تجنبي الماء والمنظفات الزيتية على نقاط التثبيت، واحفظي الرموش بعيداً عن الحرارة والغبار.</p></div>
+        </div>
+    </div>
+
+    <div class="mobile-content-page" id="mobileBoxPage" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="mobileBoxTitle">
+        <div class="mobile-page-header">
+            <h2 id="mobileBoxTitle">اختاري نوع الرمش</h2>
+            <button class="mobile-page-close" type="button" data-close-mobile-page aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="mobile-page-body">
+            <p class="mobile-page-intro">لون النقش على العلبة يعرّف بالنوع ولا يتم اختياره بشكل منفصل.</p>
+            <div class="mobile-type-preview-grid">
+                <div class="mobile-box-preview mobile-lash-preview"><span>شكل الرمش</span><img id="mobileLashImage" src="assets/images/tab-lash-01-iris-black.png" alt="رموش Pink"></div>
+                <div class="mobile-box-preview"><span>لون النوع على العلبة</span><img id="mobileBoxImage" src="assets/images/case-linked-01-iris-black.png" alt="علبة Pink بالنقش الوردي"></div>
+            </div>
+            <div class="mobile-box-swatches" aria-label="أنواع الرموش">
+                <button class="mobile-box-swatch active" type="button" data-box-image="assets/images/case-linked-01-iris-black.png" data-lash-image="assets/images/tab-lash-01-iris-black.png" data-box-name="Pink" data-color-name="النقش الوردي" data-desc="خصل Wispy متدرجة تمنح العين حضوراً ناعماً." style="--swatch-color:#FF98CB" aria-label="Pink"><span style="background:#FF98CB"></span>Pink</button>
+                <button class="mobile-box-swatch" type="button" data-box-image="assets/images/case-linked-02-frost-black.png" data-lash-image="assets/images/tab-lash-02-frost-black.png" data-box-name="Blue" data-color-name="النقش الأزرق" data-desc="توزيع خفيف وهوائي للإطلالة اليومية." style="--swatch-color:#98CBFF" aria-label="Blue"><span style="background:#98CBFF"></span>Blue</button>
+                <button class="mobile-box-swatch" type="button" data-box-image="assets/images/case-linked-03-bunny-black.png" data-lash-image="assets/images/tab-lash-03-bunny-black.png" data-box-name="Green" data-color-name="النقش الأخضر" data-desc="خصل Spiky واضحة لرفع العين." style="--swatch-color:#B2E49F" aria-label="Green"><span style="background:#B2E49F"></span>Green</button>
+                <button class="mobile-box-swatch" type="button" data-box-image="assets/images/case-linked-04-ice-black.png" data-lash-image="assets/images/tab-lash-04-ice-black.png" data-box-name="Purple" data-color-name="النقش البنفسجي" data-desc="كثافة ممتلئة للمناسبات." style="--swatch-color:#C09CEC" aria-label="Purple"><span style="background:#C09CEC"></span>Purple</button>
+                <button class="mobile-box-swatch" type="button" data-box-image="assets/images/case-linked-05-natural.png" data-lash-image="assets/images/tab-lash-05-natural.png" data-box-name="Orange" data-color-name="النقش البرتقالي" data-desc="نتيجة خفيفة قريبة من الرموش الطبيعية." style="--swatch-color:#FF9866" aria-label="Orange"><span style="background:#FF9866"></span>Orange</button>
+                <button class="mobile-box-swatch" type="button" data-box-image="assets/images/case-linked-06-morning-mist.png" data-lash-image="assets/images/tab-lash-06-morning-mist.png" data-box-name="Yellow" data-color-name="النقش الأصفر" data-desc="امتلاء ناعم بخصل دقيقة ومتداخلة." style="--swatch-color:#D2C63D" aria-label="Yellow"><span style="background:#FFFF98"></span>Yellow</button>
+            </div>
+            <div class="mobile-info-card mobile-type-copy" style="margin-top:16px"><h3 id="mobileBoxName">Pink</h3><strong id="mobileBoxColor">النقش الوردي</strong><p id="mobileBoxDesc">خصل Wispy متدرجة تمنح العين حضوراً ناعماً.</p></div>
+            <a href="index.html#products" class="btn" data-close-mobile-page style="width:100%;margin-top:8px">شاهدي جميع الأنواع</a>
+        </div>
+    </div>
+
+    <div class="mobile-content-page" id="mobileAccessoriesPage" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="mobileAccessoriesTitle">
+        <div class="mobile-page-header">
+            <h2 id="mobileAccessoriesTitle">إكسسوارات تاب</h2>
+            <button class="mobile-page-close" type="button" data-close-mobile-page aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="mobile-page-body">
+            <p class="mobile-page-intro">إضافات خفيفة مستوحاة من شخصيات الهوية، يمكن تقديمها مع الطلبات أو إتاحتها كخيارات مستقلة.</p>
+            <div class="mobile-accessories-grid">
+                <article class="mobile-accessory-card"><img src="assets/images/accessory-stickers.png" alt="ملصقات حيوانات تاب"><div class="mobile-accessory-copy"><h3>ملصقات الهوية</h3><p>ورقة ملصقات لشخصيات تاب المرحة.</p><span class="mobile-accessory-status">إضافة اختيارية</span></div></article>
+                <article class="mobile-accessory-card"><img src="assets/images/accessory-keychain.png" alt="تعليقة أكريليك تاب"><div class="mobile-accessory-copy"><h3>تعليقة أكريليك</h3><p>تعليقة شفافة خفيفة للحقيبة أو المفاتيح.</p><span class="mobile-accessory-status">إضافة اختيارية</span></div></article>
+                <article class="mobile-accessory-card"><img src="assets/images/accessory-mirror.png" alt="مرآة حقيبة تاب"><div class="mobile-accessory-copy"><h3>مرآة حقيبة</h3><p>مرآة دائرية صغيرة بتفاصيل باستيلية.</p><span class="mobile-accessory-status">إضافة اختيارية</span></div></article>
+                <article class="mobile-accessory-card"><img src="assets/images/accessory-gift-card.png" alt="بطاقة هدية تاب"><div class="mobile-accessory-copy"><h3>بطاقة هدية</h3><p>بطاقة مع ظرف ناعم لهدية متكاملة.</p><span class="mobile-accessory-status">إضافة اختيارية</span></div></article>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-content-page" id="mobilePolicyPage" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="mobilePolicyTitle">
+        <div class="mobile-page-header">
+            <h2 id="mobilePolicyTitle">الشراء والتوصيل والاسترجاع</h2>
+            <button class="mobile-page-close" type="button" data-close-mobile-page aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="mobile-page-body">
+            <div class="mobile-info-card"><h3>طريقة الشراء</h3><p>اختاري الرمش، أضيفيه إلى السلة، راجعي الكمية والعنوان ثم أكملي الدفع.</p></div>
+            <div class="mobile-info-card"><h3>مدة التوصيل</h3><p>تظهر المدة التقديرية حسب المدينة وشركة الشحن قبل إتمام الطلب.</p></div>
+            <div class="mobile-info-card"><h3>الاسترجاع خلال 7 أيام</h3><p>يمكن طلب الاسترجاع خلال أسبوع من الاستلام إذا بقي المنتج مغلفاً وبحالته الأصلية.</p></div>
+            <div class="mobile-info-card"><h3>المنتج المفتوح</h3><p>لأسباب صحية لا يمكن استرجاع المنتج بعد فتح التغليف أو إزالة الختم.</p></div>
+            <a href="index.html#products" class="btn" data-close-mobile-page style="width:100%;margin-top:8px">اختاري الرمش الآن</a>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         NEW HTML: Product Detail Overlay (صفحة تفاصيل المنتج التفاعلية الفاخرة)
+         ==================================================================== -->
+    <div id="productDetailOverlay" class="product-detail-overlay">
+        <div class="detail-container">
+            <!-- زر الإغلاق والعودة الفاخر -->
+            <button class="close-detail-btn" id="closeDetailBtn" aria-label="إغلاق والعودة للرئيسية">
+                <i class="fa-solid fa-arrow-right"></i> العودة للرئيسية
+            </button>
+            
+            <div class="detail-grid">
+                <!-- الجزء الأيمن: معرض الصور التفاعلي المتكامل -->
+                <div class="detail-gallery-section">
+                    <div class="detail-main-stage">
+                        <img id="detailMainImg" src="index.html" alt="عرض تفصيلي للرمش" onerror="this.onerror=null; this.src='assets/images/ChatGPT Image Jun 21, 2026 at 01_52_20 PM.png';">
+                    </div>
+                    
+                    <!-- الأستوديو المصغر للتنقل بين الصور المرفوعة -->
+                    <div class="detail-thumbs-grid">
+                        <div class="detail-thumb active" data-img-src="" id="thumbProduct" title="شكل الرمش">
+                            <img id="thumbProductImage" src="assets/images/tab-lash-01-iris-black.png" alt="معاينة رمش Pink">
+                            <span class="thumb-label">شكل الرمش</span>
+                        </div>
+                        <div class="detail-thumb" data-img-src="assets/images/lash-eye-iris-black.png" id="thumbModel" title="الموديل ترتدي الرمش">
+                            <img id="thumbModelImage" src="assets/images/lash-eye-iris-black.png" alt="موديل ترتدي رمش Pink">
+                            <span class="thumb-label">على الموديل</span>
+                        </div>
+                        <div class="detail-thumb" data-img-src="assets/images/product_lashes_case_open_transparent.png" id="thumbOpenCase" title="العلبة مفتوحة">
+                            <img id="thumbOpenCaseImage" src="assets/images/product_lashes_case_open_transparent.png" alt="علبة الرموش مفتوحة">
+                            <span class="thumb-label">علبة مفتوحة</span>
+                        </div>
+                        <div class="detail-thumb" data-img-src="assets/images/case-linked-01-iris-black.png" id="thumbClosedCase" title="العلبة مغلقة">
+                            <img id="thumbClosedCaseImage" src="assets/images/case-linked-01-iris-black.png" alt="علبة Pink مغلقة">
+                            <span class="thumb-label">علبة مغلقة</span>
+                        </div>
+                        <div class="detail-thumb" data-img-src="assets/images/packaging_color_coding_grid.png" id="thumbPackaging" title="باكج التغليف">
+                            <img id="thumbPackagingImage" src="assets/images/packaging_color_coding_grid.png" alt="باكج تغليف Pink">
+                            <span class="thumb-label">باكج التغليف</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الجزء الأيسر: تفاصيل ومواصفات الرمش الفاخرة -->
+                <div class="detail-info-section">
+                    <div class="detail-header">
+                        <span class="detail-badge" id="detailBadge">مميز</span>
+                        <h2 class="detail-title" id="detailTitle">اسم الرمش</h2>
+                        <div class="detail-price-wrap">
+                            <span class="detail-price" id="detailPrice">100 ريال</span>
+                            <span class="detail-price-old" id="detailPriceOld">130 ريال</span>
+                        </div>
+                    </div>
+                    
+                    <p class="detail-description" id="detailDesc">
+                        وصف تفصيلي دقيق لستايل الرمش وتناغمه الساحر مع ملامح العين وتأثيره...
+                    </p>
+                    
+                    <!-- المواصفات التقنية الراقية -->
+                    <div class="tech-specs-box">
+                        <h4 class="specs-title">مواصفات ذكية ممتازة:</h4>
+                        <div class="spec-row">
+                            <span class="spec-label"><i class="fa-solid fa-magnet"></i> تقنية التثبيت:</span>
+                            <span class="spec-val">5 مغانط ميكرو دقيقة فائقة القوة</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label"><i class="fa-solid fa-arrows-spin"></i> عدد مرات الاستخدام:</span>
+                            <span class="spec-val">أكثر من 40 مرة مع العناية البسيطة</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label"><i class="fa-solid fa-feather"></i> الوزن والملمس:</span>
+                            <span class="spec-val">خفيف كأوراق الحرير، لا يسبب إجهاد للعين</span>
+                        </div>
+                    </div>
+                    
+                    <!-- التحكم والطلب المباشر المحاكي -->
+                    <div class="detail-purchase-controls">
+                        <div class="qty-selector">
+                            <button class="qty-btn" id="qtyMinus"><i class="fa-solid fa-minus"></i></button>
+                            <span class="qty-num" id="qtyValue">1</span>
+                            <button class="qty-btn" id="qtyPlus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        
+                        <button class="btn btn-cart-detail" id="addToCartDetail">
+                            <i class="fa-solid fa-bag-shopping"></i> إضافة إلى حقيبة التسوق
+                        </button>
+                    </div>
+                    
+                    <!-- رسالة تأكيد تفاعلية ناعمة تظهر لعدم استخدام alert -->
+                    <div id="cartSuccessToast" class="cart-success-toast">
+                        <i class="fa-solid fa-circle-check"></i> تم إضافة <span id="toastProductName" style="margin: 0 4px;"></span> بنجاح إلى حقيبتكِ!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         NEW MULTI-PAGE OVERLAY: Cart Page (صفحة سلة التسوق التفاعلية الفاخرة)
+         ==================================================================== -->
+    <div id="cartPageOverlay" class="page-overlay">
+        <div class="container">
+            <div class="page-header-container">
+                <h2 style="font-size: 28px; font-weight: 700;"><i class="fa-solid fa-basket-shopping" style="color: var(--purple); margin-left: 10px;"></i>حقيبة تسوقكِ</h2>
+                <button class="page-close-btn" id="closeCartPageBtn">
+                    مواصلة التسوق <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </div>
+
+            <!-- عرض المنتجات المضافة والملخص -->
+            <div class="cart-grid" id="cartActiveGrid">
+                <!-- قائمة المنتجات -->
+                <div class="cart-items-section" id="cartItemsContainer">
+                    <!-- يتم بنائها تلقائياً بواسطة JavaScript -->
+                </div>
+
+                <!-- بطاقة الفاتورة والملخص -->
+                <div class="cart-summary-card">
+                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; border-bottom: 1px dashed var(--border-light); padding-bottom: 12px;">ملخص الطلب</h3>
+                    
+                    <div class="summary-row">
+                        <span>قيمة المنتجات</span>
+                        <span id="cartSubtotal">0 ريال</span>
+                    </div>
+                    <!-- تظهر عند تطبيق كود خصم بنجاح -->
+                    <div class="summary-row" id="discountRow" style="display: none; color: #10b981; font-weight: 700;">
+                        <span id="discountLabel">خصم الكود</span>
+                        <span id="discountValue">0 ريال</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>التوصيل والشحن</span>
+                        <span id="cartShipping">15 ريال</span>
+                    </div>
+                    <div class="summary-row" style="color: #10b981; font-weight: 700; display: none;" id="freeShippingMsg">
+                        <span>ميزة الشحن</span>
+                        <span>شحن مجاني للطلبات فوق ١٩٩ ريال!</span>
+                    </div>
+
+                    <!-- كوبونات الخصم التفاعلية المظهرية -->
+                    <div class="promo-code-wrap">
+                        <input type="text" class="promo-input" id="promoInput" placeholder="أدخلي رمز الكوبون (مثال: TAB10)">
+                        <button class="promo-btn" id="promoBtn">تطبيق</button>
+                    </div>
+                    <!-- رسالة التغذية الراجعة للكوبون -->
+                    <div id="promoFeedback" style="font-size: 13px; font-weight: 700; margin-top: -12px; margin-bottom: 15px; display: none;"></div>
+
+                    <div class="summary-row total-row">
+                        <span>المجموع الكلي <span style="font-size: 12px; font-weight: 400; color: var(--text-light);">(شاملاً الضريبة)</span></span>
+                        <span id="cartGrandTotal">0 ريال</span>
+                    </div>
+
+                    <button class="btn checkout-btn" id="goToCheckoutBtn">
+                        الذهاب لصفحة الدفع والشحن <i class="fa-solid fa-credit-card" style="margin-right: 8px;"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- صفحة السلة فارغة -->
+            <div class="cart-empty-state" id="cartEmptyState">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <h3>حقيبة تسوقكِ فارغة حالياً</h3>
+                <p>تصفحي تصاميم ومجموعات رموش تاب الفريدة واختاري ما يناسب روتينكِ وإطلالتكِ لتجديها هنا.</p>
+                <button class="btn" id="returnToBrowseBtn">استكشاف الرموش المغناطيسية</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         NEW MULTI-PAGE OVERLAY: Checkout & Payment Page (صفحة الشحن والدفع والأمان)
+         ==================================================================== -->
+    <div id="checkoutPageOverlay" class="page-overlay">
+        <div class="container">
+            <div class="page-header-container">
+                <h2 style="font-size: 28px; font-weight: 700;"><i class="fa-solid fa-shield-halved" style="color: var(--purple); margin-left: 10px;"></i>إتمام الطلب بأمان</h2>
+                <button class="page-close-btn" id="backToCartBtn">
+                    العودة للسلة <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </div>
+
+            <form id="checkoutForm" onsubmit="event.preventDefault();">
+                <div class="checkout-grid">
+                    <!-- نموذج البيانات وطرق الدفع -->
+                    <div class="checkout-form-section">
+                        
+                        <!-- 1. تفاصيل التوصيل والشحن -->
+                        <div class="checkout-section-block">
+                            <h3 class="checkout-block-title"><i class="fa-solid fa-truck-fast"></i>تفاصيل الشحن والتوصيل</h3>
+                            <div class="form-fields-grid">
+                                <div class="form-group-full">
+                                    <label class="checkout-input-label">الاسم الكامل للمستلمة *</label>
+                                    <input type="text" class="checkout-input" id="shippingName" required placeholder="مثال: نورا أحمد محمد">
+                                </div>
+                                <div>
+                                    <label class="checkout-input-label">رقم الجوال النشط *</label>
+                                    <input type="tel" class="checkout-input" id="shippingPhone" required placeholder="05xxxxxxxx" pattern="05[0-9]{8}">
+                                </div>
+                                <div>
+                                    <label class="checkout-input-label">المدينة *</label>
+                                    <input type="text" class="checkout-input" id="shippingCity" required placeholder="الرياض / جدة / الدمام...">
+                                </div>
+                                <div class="form-group-full">
+                                    <label class="checkout-input-label">عنوان التوصيل السكني بالتفصيل *</label>
+                                    <input type="text" class="checkout-input" id="shippingAddress" required placeholder="اسم الحي، الشارع، رقم المنزل">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. خيارات الدفع التفاعلية الفاخرة -->
+                        <div class="checkout-section-block">
+                            <h3 class="checkout-block-title"><i class="fa-solid fa-wallet"></i>طريقة الدفع الآمنة</h3>
+                            
+                            <div class="payment-methods-grid">
+                                <!-- بطاقة مدى / ائتمان -->
+                                <div class="payment-method-card active" data-method="card">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                    <span>مدى / فيزا</span>
+                                </div>
+                                <!-- أبل باي -->
+                                <div class="payment-method-card" data-method="applepay">
+                                    <i class="fa-brands fa-apple-pay" style="font-size: 32px;"></i>
+                                    <span>Apple Pay</span>
+                                </div>
+                                <!-- الدفع عند الاستلام -->
+                                <div class="payment-method-card" data-method="cod">
+                                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                                    <span>الدفع عند الاستلام</span>
+                                </div>
+                            </div>
+
+                            <!-- حقول البطاقة البنكية -->
+                            <div class="card-details-fields active" id="cardDetailsBlock">
+                                <div class="form-group-full">
+                                    <label class="checkout-input-label">رقم البطاقة الائتمانية *</label>
+                                    <input type="text" class="checkout-input" id="cardNum" placeholder="xxxx xxxx xxxx xxxx" maxlength="19">
+                                </div>
+                                <div>
+                                    <label class="checkout-input-label">تاريخ الانتهاء *</label>
+                                    <input type="text" class="checkout-input" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div>
+                                    <label class="checkout-input-label">الرمز السري (CVV) *</label>
+                                    <input type="password" class="checkout-input" id="cardCVV" placeholder="xxx" maxlength="3">
+                                </div>
+                            </div>
+
+                            <!-- محاكي Apple Pay الفخم -->
+                            <div class="apple-pay-simulator-box" id="applePayBlock">
+                                <div class="apple-pay-btn-text">
+                                    <i class="fa-brands fa-apple"></i> اضغطي مرتين للشراء بـ Apple Pay
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- فاتورة وملخص الشراء الملتصق -->
+                    <div class="cart-summary-card">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; border-bottom: 1px dashed var(--border-light); padding-bottom: 12px;">مراجعة الفاتورة</h3>
+                        
+                        <!-- مصغر المنتجات المشحونة -->
+                        <div id="checkoutItemsBrief" style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px; max-height:160px; overflow-y:auto; padding-left:5px;">
+                            <!-- يتم ملؤها تفاعلياً -->
+                        </div>
+
+                        <div class="summary-row">
+                            <span>قيمة الرموش</span>
+                            <span id="checkoutSubtotal">0 ريال</span>
+                        </div>
+                        <div class="summary-row" id="checkoutDiscountRow" style="display: none; color: #10b981; font-weight: 700;">
+                            <span>خصم الكوبون</span>
+                            <span id="checkoutDiscountValue">0 ريال</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>الشحن إلى عنوانك</span>
+                            <span id="checkoutShipping">15 ريال</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>المبلغ المطلوب دفعه</span>
+                            <span id="checkoutGrandTotal" style="color: var(--purple);">0 ريال</span>
+                        </div>
+
+                        <button type="submit" class="btn checkout-btn" id="confirmPaymentBtn" style="background: linear-gradient(135deg, var(--purple), var(--pink)); border:none;">
+                            تأكيد الطلب ودفع <span id="paymentBtnAmount" style="margin-right: 5px;">0 ريال</span> <i class="fa-solid fa-lock" style="margin-right: 8px;"></i>
+                        </button>
+                        
+                        <p style="text-align: center; font-size: 12px; color: var(--text-light); margin-top: 15px;">
+                            <i class="fa-solid fa-shield-halved" style="color: #10b981; margin-left: 4px;"></i> جميع المدفوعات والمعاملات مشفرة بالكامل طبقاً لمعايير الأمان العالمية.
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         NEW MULTI-PAGE OVERLAY: Order Success Page (صفحة نجاح الطلب والتأكيد الفنية)
+         ==================================================================== -->
+    <div id="orderSuccessOverlay" class="success-overlay">
+        <!-- طبقة تساقط جزيئات الفرح والكونفيتي الملونة الاحتفالية تفاعلياً -->
+        <div id="confettiCanvasContainer" style="position: absolute; inset:0; pointer-events: none; overflow: hidden; z-index: 10;"></div>
+
+        <div class="success-content-card" style="position: relative; z-index: 20;">
+            <div class="success-checkmark-circle">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            
+            <h2 style="font-size: 32px; font-weight: 700; color: var(--text-dark); margin-bottom: 10px;">تم تأكيد طلبكِ بنجاح!</h2>
+            <p style="color: var(--text-light); font-size: 16px; max-width: 500px; margin: 0 auto;">شكراً لتسوقكِ وثقتكِ في تاب بيوتي ✨ رموشكِ الجديدة صُنعت لتمنح عينيكِ حضوراً مدهشاً وتفاصيل أنيقة.</p>
+
+            <!-- تفاصيل الفاتورة الرسمية المصغرة -->
+            <div class="order-invoice-details">
+                <div class="invoice-item-row">
+                    <span>رقم الطلب المرجعي:</span>
+                    <strong id="invoiceOrderNumber" style="font-family: monospace; font-size: 16px; letter-spacing: 1px;">#TAB-92481</strong>
+                </div>
+                <div class="invoice-item-row">
+                    <span>الاسم الكامل:</span>
+                    <strong id="invoiceName">نورا أحمد</strong>
+                </div>
+                <div class="invoice-item-row">
+                    <span>العنوان المختار:</span>
+                    <strong id="invoiceAddress">الرياض، حي السليمانية</strong>
+                </div>
+                <div class="invoice-item-row">
+                    <span>طريقة الدفع المعتمدة:</span>
+                    <strong id="invoicePaymentMethod">مدى / فيزا</strong>
+                </div>
+                <div class="invoice-item-row" style="border-top: 1px dashed var(--border-light); padding-top: 10px; margin-top: 5px;">
+                    <span>المبلغ الكلي المدفوع:</span>
+                    <strong id="invoiceAmount" style="color: var(--purple); font-size: 16px;">١٠٠ ريال</strong>
+                </div>
+            </div>
+
+            <div style="background-color: rgba(192, 156, 236, 0.05); border-radius: 16px; padding: 18px; margin-bottom: 30px; border: 1px solid rgba(192, 156, 236, 0.15);"><p style="font-size:14px;color:var(--text-dark);margin:0;line-height:1.6;"><i class="fa-solid fa-truck-fast" style="color:var(--purple);margin-left:6px;"></i> تظهر مدة التوصيل المتوقعة حسب المدينة وشركة الشحن قبل تأكيد الطلب.</p></div>
+
+            <button class="btn" id="successBackToHomeBtn" style="width: 100%; font-weight: 700;">
+                العودة للرئيسية ومواصلة التصفح
+            </button>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         NEW ELEMENT: Mobile Menu Navigation Drawer & Backdrop
+         ==================================================================== -->
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true" aria-label="قائمة التنقل">
+        <div class="mobile-drawer-head">
+            <a href="index.html#hero" class="drawer-brand drawer-link" aria-label="تاب بيوتي">
+                <img src="assets/images/logo_tab_gradient_transparent_extracted.png" alt="تاب بيوتي">
+            </a>
+            <button class="mobile-drawer-close" id="closeMobileDrawerBtn" aria-label="إغلاق القائمة"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="mobile-drawer-intro">
+            <span>لكل إطلالة رمشها</span>
+            <p>اختاري النوع، قارني النتيجة، وأكملي طلبك بسهولة.</p>
+        </div>
+        <nav class="mobile-drawer-links">
+            <a href="index.html#hero" class="drawer-link"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a>
+            <a href="index.html#products" class="drawer-link"><i class="fa-solid fa-eye"></i><span>أنواع الرموش</span></a>
+            <a href="index.html#packaging-studio" class="drawer-link"><i class="fa-solid fa-palette"></i><span>لون كل نوع</span></a>
+            <a href="index.html#community" class="drawer-link"><i class="fa-solid fa-star"></i><span>التقييمات</span></a>
+            <a href="index.html#faq" class="drawer-link"><i class="fa-solid fa-circle-question"></i><span>الأسئلة الشائعة</span></a>
+            <a href="index.html#" class="drawer-link" data-open-mobile-page="mobileGuidePage"><i class="fa-solid fa-wand-magic-sparkles"></i><span>طريقة الاستخدام</span></a>
+            <a href="index.html#" class="drawer-link" data-open-mobile-page="mobilePolicyPage"><i class="fa-solid fa-shield-heart"></i><span>الشحن والاسترجاع</span></a>
+        </nav>
+        <div class="mobile-drawer-footer">
+            <button class="btn" id="drawerBrowseBtn">تصفحي الرموش الآن</button>
+            <small><i class="fa-solid fa-lock"></i> دفع آمن وخيارات شحن تظهر عند إتمام الطلب</small>
+        </div>
+    </aside>
+
+    <!-- إضافة هامبرغر منيو في الهيدر لشاشات الجوال والتابلت -->
+    <script src="js/main.js"></script>
+
+    
+
+</body>
+</html>
